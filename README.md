@@ -85,10 +85,10 @@ function TopLevelSketch(p){
     function InnerClass(randomNumber){
         let myRand = p5.Vector(randomNumber * 2);
         const innerFunc = (rand) => {
-        return myRand;
-    }
+            return myRand;
+        }
 
-    return {myRand: myRand};
+        return {myRand: myRand};
     }
 }
 ```
