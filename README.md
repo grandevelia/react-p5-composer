@@ -65,11 +65,11 @@ export default Example1;
 
     Things to note:
     
-    1) Sketches can be directly imported by other sketches (they do not need to be composed by the compose function), which allows sketches to use internal effects and subcomponents and
+    1) Sketches can be directly imported by other sketches (they do not need to be composed by the compose function), which allows sketches to use internal effects and subcomponents
 
     2) Some p5 functions require that p5 is directly imported by this sketch (See the use of p5.Vector())
 
-    Inner classes are built as factory functions so that the p5 object must only be passed to each top level sketch once. Otherwise, in order to use any p5 function, each individual class has to be passed its own p5 object (very large) which impacts performance if you're doing something like tracking and updating particles or any other large collection of objects.
+    3) Inner classes are built as factory functions so that the p5 object must only be passed to each top level sketch once. Otherwise, in order to use any p5 function, each individual class has to be passed its own p5 object (very large) which impacts performance if you're doing something like tracking and updating particles or any other large collection of objects.
 */
 
 import p5 from 'p5';
