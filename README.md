@@ -1,15 +1,17 @@
-#React-p5-composer
+# React-p5-composer
 Composing the draw methods of multiple p5 sketches on the fly
 
-##Motivation
+## Motivation
 When a musician plays a song, they don't pre-select every note they will use. They just play the notes that they want, at the right time. P5 animations should be able to be playable, even improviseable, in real time. Sketch properties should be able to be added or removed dynamically, in a manner fitting with the "reusable component" architecture of React, and not necessarily preset into a single heavy and hard to navigate sketch.
 
-##Code Example
+## Code Example
+
+```
 
 //Composing sketches in display component
 //All sketches that are to be used must be imported by hand
 
-`
+
 import { compose } from '../sketches/SketchComposer.js';
 import Sketch1 from '../sketches/Sketch1';
 import Sketch2 from '../sketches/Sketch2';
@@ -20,8 +22,10 @@ let temp = <P5Wrapper
     sketch={ NewComp } 
     playAnimation={ this.state.playAnimation } 
 />
-`
-`
+
+```
+
+```
 /*
     Example of composing a sketch that could be directly composed since it exposes a display method
 */
@@ -53,8 +57,9 @@ function Example1(p){
     }
 }
 export default Example1;
-`
-`
+```
+
+```
 /* 
     Example of top-level sketch that uses inner classes
 
@@ -86,4 +91,4 @@ function TopLevelSketch(p){
     return {myRand: myRand};
     }
 }
-`
+```
